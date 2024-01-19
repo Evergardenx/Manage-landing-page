@@ -1,0 +1,95 @@
+.cta,
+.feature-number {
+  border-radius: 2.5rem;
+  border: 1px solid $color-bright-red;
+  background: $color-bright-red;
+  color: $color-light-gray;
+}
+
+.cta {
+  font-weight: 700;
+  cursor: pointer;
+  height: 4.4rem;
+  width: 13.7rem;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  box-shadow: 0px 12px 13px -10px #f25f3a;
+
+  &:hover {
+    background: lighten($color-bright-red, 12%);
+    border: 1px solid lighten($color-bright-red, 12%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &--nav {
+    display: none;
+    @media screen and (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &--header {
+    margin-top: 1.4rem;
+    @media screen and (min-width: 992px) {
+      align-self: center;
+    }
+  }
+
+  &--reviews {
+    margin-top: 3.6rem;
+    @media screen and (min-width: 992px) {
+      margin-top: 2.5rem;
+    }
+  }
+
+  &--action {
+    background-color: $color-light-red;
+    color: $color-bright-red;
+
+    &:hover {
+      background-color: lighten($color-bright-red, 12%);
+      color: $color-light-gray;
+    }
+
+    @media screen and (min-width: 992px) {
+      align-self: center;
+      margin-top: 0.6rem;
+      margin-right: -0.5rem;
+      height: 4.6rem;
+      width: 13.9rem;
+    }
+  }
+
+  &--email {
+    height: 4.4rem;
+    padding: 0 2.3rem;
+    width: unset;
+    box-shadow: none;
+    @media screen and (min-width: 600px) {
+      width: 6.4rem;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 111rem;
+  padding: 0 2.4rem;
+  margin: 0 auto;
+  height: inherit;
+
+  @media screen and (min-width: 1180px) {
+    padding: 0;
+  }
+}
+
+img {
+  display: block;
+}

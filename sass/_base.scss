@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap");
+
+//COLORS: Primary
+$color-bright-red: hsl(12, 88%, 59%);
+$color-light-red: #fff0ec;
+$color-dark-blue: hsl(228, 39%, 23%);
+$color-success: #2ecc71;
+$color-error: #e74c3c;
+
+//Neutrals
+$color-gray-blue: hsl(227, 12%, 61%);
+$color-darker-blue: hsl(233, 12%, 13%);
+$color-pale-red: hsl(13, 100%, 96%);
+$color-light-gray: hsl(0, 0%, 98%);
+
+//RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  // transition: all 0.3s;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Be Vietnam", sans-serif;
+  max-width: 144rem;
+  position: relative;
+  margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: url(/images/bg-tablet-pattern.svg) no-repeat;
+    background-position: top -10rem right -12rem;
+    background-size: 44.5rem 44rem;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    @media screen and (min-width: 600px) {
+      background-position: top -7% right -7rem;
+      background-size: 95%;
+    }
+    @media screen and (min-width: 768px) {
+      background-position: top -9% right -10rem;
+      background-size: 82%;
+    }
+    @media screen and (min-width: 992px) {
+      background-size: 82rem 81rem;
+      background-position: top -15rem right -15rem;
+    }
+  }
+  @media screen and (min-width: 1441px) {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+h1,
+h2,
+h3 {
+  color: $color-dark-blue;
+}
+
+p {
+  color: $color-gray-blue;
+}

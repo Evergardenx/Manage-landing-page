@@ -1,0 +1,212 @@
+footer {
+  background: $color-darker-blue;
+  color: $color-light-gray;
+  padding-top: 5.2rem;
+  @media screen and (min-width: 992px) {
+    padding-top: 6.2rem;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr 5.2rem;
+    grid-row-gap: 2.8rem;
+    grid-template-areas: "email" "menu" "social" "copyright";
+    position: relative;
+    @media screen and (min-width: 992px) {
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 3fr 5fr 5fr;
+      grid-template-areas:
+        "social menu email"
+        "social menu copyright";
+      column-gap: 5.3rem;
+      grid-row-gap: 2.2rem;
+    }
+
+    form {
+      grid-area: email;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 56rem;
+      position: relative;
+      @media screen and (min-width: 992px) {
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0.3rem 0 2.7rem;
+      }
+
+      input {
+        width: 64vw;
+        height: 4.4rem;
+        border-radius: 2.5rem;
+        border: 2px solid transparent;
+        padding-left: 2.4rem;
+        color: $color-gray-blue;
+        margin-right: 0.7rem;
+        outline: none;
+
+        &::placeholder {
+          color: lighten($color-gray-blue, 12%);
+        }
+
+        &:focus {
+          border-color: $color-gray-blue;
+        }
+        @media screen and (min-width: 992px) {
+          width: 20rem;
+          padding-left: 1.5rem;
+        }
+      }
+
+      small {
+        color: $color-error;
+        position: absolute;
+        visibility: hidden;
+        bottom: 0.5rem;
+        left: 2rem;
+        font-size: 1.2rem;
+        left: 2%;
+        @media screen and (min-width: 992px) {
+          left: 32%;
+        }
+      }
+    }
+
+    .success input {
+      border-color: $color-success;
+    }
+
+    .error {
+      input {
+        border-color: $color-error;
+      }
+      small {
+        visibility: visible;
+      }
+    }
+
+    .footer-menu {
+      grid-area: menu;
+      display: flex;
+      justify-content: space-around;
+
+      // display: grid;
+      // grid-column-gap: 18.5rem;
+      // grid-template-columns: repeat(2, 1fr);
+
+      width: 100%;
+      max-width: 56rem;
+      margin: 0 auto;
+      @media screen and (min-width: 992px) {
+        // justify-content: space-between;
+        display: grid;
+        grid-column-gap: 18.5rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          padding-bottom: 1.3rem;
+          font-size: 1.5rem;
+          color: $color-light-gray;
+          display: block;
+
+          &:hover {
+            color: $color-bright-red;
+          }
+        }
+      }
+    }
+
+    .social {
+      grid-area: social;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 1rem;
+      @media screen and (min-width: 992px) {
+        padding: 0 0 4.3rem 0.6rem;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 56rem;
+        padding: 0 4vw;
+        @media screen and (min-width: 768px) {
+          padding: 0;
+        }
+        @media screen and (min-width: 992px) {
+          order: 2;
+          max-width: 15rem;
+          margin: 0;
+        }
+
+        img {
+          width: 3.2rem;
+          height: 3.2rem;
+          &:hover {
+            transform: scale(1.2);
+          }
+          @media screen and (min-width: 992px) {
+            height: unset;
+            width: unset;
+          }
+        }
+
+        .size {
+          width: 3.7rem;
+
+          @media screen and (min-width: 992px) {
+            width: unset;
+          }
+        }
+        li {
+          list-style: none;
+        }
+      }
+
+      .logo {
+        align-self: center;
+        margin-bottom: 2.5rem;
+        cursor: pointer;
+        @media screen and (min-width: 992px) {
+          align-self: unset;
+          width: fit-content;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .copyright {
+      grid-area: copyright;
+      align-self: flex-start;
+      justify-self: center;
+      font-size: 1.3rem;
+      @media screen and (min-width: 992px) {
+        justify-self: flex-end;
+        font-size: 1.26rem;
+        padding-top: 1rem;
+      }
+    }
+  }
+
+  .attribution {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 0.2rem;
+  }
+
+  .attribution a {
+    color: #909fda;
+    text-decoration: none;
+    &:hover {
+      color: $color-bright-red;
+    }
+  }
+}
